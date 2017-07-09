@@ -36,5 +36,8 @@ for file in os.listdir(directory_name):
                         if detail.tag == "id":
                             print(detail.text)  
                             id = detail.text
-                    CSV.write(id + "," + "'" + description + "'\n")
+                        if detail.tag == "title":
+                            print(detail.text)  
+                            title = detail.text
+                    CSV.write(id + "," + title + "," + '"' + description + '"\n')
         
