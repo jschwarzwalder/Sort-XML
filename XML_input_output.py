@@ -1,7 +1,11 @@
 # for XML_sort virtualenv
 
 import os
-for file in os.listdir("/mydir"):
+import sys
+
+directory_name = sys.argv[1]
+
+for file in os.listdir(directory_name):
     if file.endswith(".xml"):
-        print(os.path.join("/mydir", file))
+        print(os.path.join(directory_name, file))
         
